@@ -21,10 +21,11 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- Load balancers protect the availability of certain applications or services. If one server goes down, all traffic will be directed to another server running the same application. The advantage of a jump box is you could use it as a sort of hub where you can set a network security group or firewall that only allows specified traffic through. Whatever rules you set then make jumping to whatever server is connected to the jump box much more secure than just accessing a confidential server on a public network with no specified rules.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
