@@ -26,8 +26,10 @@ Load balancing ensures that the application will be highly reliable, in addition
 - Load balancers protect the availability of certain applications or services. If one server goes down, all traffic will be directed to another server running the same application. The advantage of a jump box is you could use it as a sort of hub where you can set a network security group or firewall that only allows specified traffic through. Whatever rules you set then make jumping to whatever server is connected to the jump box much more secure than just accessing a confidential server on a public network with no specified rules.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What does Filebeat watch for?
+    Filebeat monitors log files or specified locations. It also collects log events and forwards them to elasticsearch or logstash.
+- What does Metricbeat record?
+    Takes the metrics and statistics that it collects and ships them to the output that you specify such as elasticsearch or logstash
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
