@@ -35,9 +35,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     | DVWA         |            |                  |
-| TODO     | DVWA         |            |                  |
-| TODO     | Monitor         |            |                  |
+| Web-1     | DVWA         |            |                  |
+| Web-2    | DVWA         |            |                  |
+| Elk-VM     | Monitor         |            |                  |
 
 ### Access Policies
 
