@@ -93,7 +93,7 @@ SSH into the control node and follow the steps below:
 - Copy the configure_elkVM.yml file to the Jumpbox.
 - Update the Ansible hosts file to include a header defining a group of machines as "Elk" and beneath that inserting the IP addresses of the hosts
 - Run the playbook, and navigate to Elk-VM to check that the installation worked as expected.
-- To double check that the elk server is up in running here is the URL: [Kibana](http://20.121.24.117:5601/app/kibana)
+- To double check that the elk server is up in running here is the URL: [http://20.121.24.117:5601/app/kibana](http://20.121.24.117:5601/app/kibana)
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
