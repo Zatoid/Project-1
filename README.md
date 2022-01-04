@@ -95,9 +95,5 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Elk-VM to check that the installation worked as expected.
 - To double check that the elk server is up in running here is the URL: [http://20.121.24.117:5601/app/kibana](http://20.121.24.117:5601/app/kibana)
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+sudo ansible-playbook configure_elkVM.yml
