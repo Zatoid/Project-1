@@ -55,9 +55,9 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No              | 73.78.14.91    |
+| Jump Box | Yes              | 73.78.14.91    |
 | Vnet         | No                    | 10.0.0.4                     |
-| Elk-VM         | No                    | 73.78.14.91                     |
+| Elk-VM         | Yes                    | 73.78.14.91                     |
 
 ### Elk Configuration
 
@@ -84,7 +84,8 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat is a log monitoring tool, it collects log events such as audit logs, deprecation logs, gc logs, server logs, and slow logs and sends them to either Elasticsearch or Logstash
+- Metricbeat is a lightweight shipper that collects metrics from the operating system and running services on a server, it then takes those metrics and statistics and ships them to the desired output, whether it is Elasticsearch or Logstash.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
