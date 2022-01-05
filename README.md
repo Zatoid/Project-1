@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 [ELK playbook](ansible/configure_elkVM.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -23,7 +23,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
 - What aspect of security do load balancers protect? What is the advantage of a jump box?_
-- Load balancers protect the availability of certain applications or services. If one server goes down, all traffic will be directed to another server running the same application. The advantage of a jump box is you could use it as a sort of hub where you can set a network security group or firewall that only allows specified traffic through. Whatever rules you set then make jumping to whatever server is connected to the jump box much more secure than just accessing a confidential server on a public network with no specified rules.
+- Load balancers protect the availability of certain applications or services. If one server goes down, all traffic will be directed to another server running the same application. The advantage of a jump box is you could use it as a sort of hub where you can set a network security group or firewall that only allows specified traffic through. Whatever rules you set then make jumping to whatever server is connected to the jump box much more secure than just accessing a server on a public network with no specified rules.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - What does Filebeat watch for?
@@ -32,11 +32,10 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
     Takes the metrics and statistics that it collects and ships them to the output that you specify such as elasticsearch or logstash
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
 | Web-1     | DVWA         | 10.0.0.8           | Linux                 |
 | Web-2    | DVWA         | 10.0.0.9           | Linux                 |
 | Elk-VM     | Monitor         | 10.1.0.4           | Linux                 |
@@ -61,7 +60,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because if we were working with a network of several machines, configuring each of those machines would take an obscene amount of time. Automating it gets the job done in a fraction of the time it would take to do it manually. Manual labor also increases the chances for mistakes during configuration. Running a playbook removes any margin for human error.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because if we were working with a network of several machines, configuring each of those machines would take an obscene amount of time. Automating it gets the job done in a fraction of the time it would take to do it manually. Manual labor also increases the chances for mistakes during configuration. Running a playbook reduces the margin for human error.
 
 The playbook implements the following tasks:
 - Installs Docker
@@ -92,9 +91,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the configure_elkVM.yml file to the Jumpbox.
-- Update the Ansible hosts file to include a header defining a group of machines as "Elk" and beneath that inserting the IP addresses of the hosts
+- Update the Ansible hosts file to include a header defining a group of machines as "Elk" and beneath that inserting the IP addresses of the machines corresponding to the Elk host
 - Run the playbook, and navigate to Elk-VM to check that the installation worked as expected.
 - To double check that the elk server is up in running here is the URL: [http://20.121.24.117:5601/app/kibana](http://20.121.24.117:5601/app/kibana)
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-sudo ansible-playbook configure_elkVM.yml
